@@ -18,7 +18,6 @@ The repository is organized into several directories for clarity and ease of use
 2. **datasets**: This folder stores the datasets used in the experiments.
 3. **query**: This folder contains four sets of queries: job-light, stats-ceb, and their subqueries.
 4. **WeightCache**: This folder is used to store the cache for weights.
-5. 
 
 ## Abstract
 
