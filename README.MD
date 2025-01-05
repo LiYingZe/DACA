@@ -7,8 +7,8 @@
   - [Table of Contents](#table-of-contents)
   - [Directories](#directories)
   - [Abstract](#abstract)
+  - [How to get the Dataset](#how-to-get-the-dataset)
 - [How to run experiment:](#how-to-run-experiment)
-- [Experimental Validation](#experimental-validation)
 
 ## Directories
 
@@ -21,7 +21,16 @@ The repository is organized into several directories for clarity and ease of use
 
 ## Abstract
 
-Learned cardinality estimators have great potential in predicting query cardinalities. However, these learned methods, without exception, demonstrate fragility to drifts within the training data, thereby posing significant risks for real-world deployment. In this work, we are the first to investigate how minimal data-level drifts can maximally compromise the accuracy of learned estimators. To this end, we proposed the data-centric algorithmic complexity attack against all learned estimators in a black-box setting. We prove that finding the optimal data-centric attack strategy is NP-Hard. Thus, we designed a specialized approximation algorithm that achieves near-optimal solutions within polynomial-time, offering a \((1-\kappa)\) approximation ratio. Comprehensive experiments validate the effectiveness of our approach. On renowned open-sourced cardinality estimation workloads such as STATS-CEB and IMDB-JOB.
+Learned cardinality estimators have great potential in predicting query cardinalities. However, these learned methods, without exception, demonstrate fragility to drifts within the training data, thereby posing significant risks for real-world deployment. In this work, we are the first to investigate how minimal data-level drifts can maximally compromise the accuracy of learned estimators. To this end, we introduce the data-centric algorithmic complexity attack against all learned estimators in a black-box setting. We establish that finding the optimal data-centric attack strategy is NP-Hard. Thus, we designed a specialized approximation algorithm that achieves near-optimal solutions within polynomial-time, offering a $(1-\kappa)$ approximation ratio. Comprehensive experiments validate the effectiveness of our approach
+
+
+## How to get the Dataset
+
+We have placed the dataset used in the experiment in the following Google Drive link:
+https://drive.google.com/file/d/166lTTU13MlLC3zjRdryHOuV-PP2LPqID/view?usp=sharing  
+
+Please use the `wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=166lTTU13MlLC3zjRdryHOuV-PP2LPqID' -O dataset.zip` command to download it,
+and use the `unzip dataset.zip` command to unzip it.
 
 # How to run experiment:
 
@@ -37,7 +46,3 @@ Assuming you need to launch an attack on the IMDB-JOB database, targeting 20% of
 `python ./DACA.py --dataset=job --table=title.csv --primaryKey=id --query=job_light_queries.sql`
 
 Next, you can find the corresponding compromised database in the CorruptDB folder.
-
-# Experimental Validation
-
-We have also integrated Neurocard, allowing you to use IMDB-JOB to verify the attack effects at any time.
