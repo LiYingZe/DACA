@@ -29,13 +29,23 @@ Learned cardinality estimators have great potential in predicting query cardinal
 We have placed the dataset used in the experiment(**datasets**/**WeightCache** folder  ) in the following Google Drive link:
 https://drive.google.com/file/d/166lTTU13MlLC3zjRdryHOuV-PP2LPqID/view?usp=sharing  
 
+You can use:
+` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=166lTTU13MlLC3zjRdryHOuV-PP2LPqID' -O dataset.zip` 
+
+command to download it, and use 
+`unzip dataset.zip`
+
+command to unzip it.
 
 # How to run experiment:
+
+First:
+
+`mkdir ./CorruptDB/`
 
 Assuming you need to launch an attack on the STATS-CEB database, targeting 20% of the budget for the 'post' table (approximately 1.2% of the entire STATS database), you can simply run the following command with one click  :)
 
 `python ./DACA.py --dataset=stats_simplified --table=posts.csv --primaryKey=Id --query=stats_CEB.sql`
-
 
 
 Assuming you need to launch an attack on the IMDB-JOB database, targeting 20% of the budget for the 'post' table (approximately 0.8% of the entire IMDB database), you can simply run the following command with one click  :)
