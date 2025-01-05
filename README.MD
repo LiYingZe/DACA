@@ -29,13 +29,7 @@ Learned cardinality estimators have great potential in predicting query cardinal
 We have placed the dataset used in the experiment(**datasets**/**WeightCache** folder  ) in the following Google Drive link:
 https://drive.google.com/file/d/166lTTU13MlLC3zjRdryHOuV-PP2LPqID/view?usp=sharing  
 
-You can use:
-` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=166lTTU13MlLC3zjRdryHOuV-PP2LPqID' -O dataset.zip` 
-
-command to download it, and use 
-`unzip dataset.zip`
-
-command to unzip it.
+You can use ` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=166lTTU13MlLC3zjRdryHOuV-PP2LPqID' -O dataset.zip` command to download it, and use `unzip dataset.zip` command to unzip it.
 
 # How to run experiment:
 
